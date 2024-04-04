@@ -1,0 +1,21 @@
+.res-div{
+  height: fit-content;
+  width: fit-content;
+  padding: 40px;
+  background: #064663;
+  border-radius: 20px;
+  .res-name{
+    padding: 20px;
+    color: white;
+    background: #04293A;
+    border-radius: 16px;
+  }
+  .res-email{
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    background: #04293A;
+    border-radius: 16px;
+
+  }
+}

@@ -1,0 +1,4 @@
+<div class="res-div" *ngIf="userData">
+  <p class="res-name">name: {{ userData.name }}</p>
+  <p class="res-email" *ngIf="!userData.withoutEmail">email: {{ userData.email }}</p>
+</div>

@@ -1,0 +1,18 @@
+<form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+  <div class="fields-container">
+    <input class="input-field" formControlName="name" type="text" placeholder="Name" required>
+    <input class="input-field" formControlName="email" type="email" placeholder="Email" [required]="!(withoutEmail?.value)">
+  </div>
+  <div class="checkboxes-container">
+    <input class="checkbox-field" formControlName="withoutEmail" type="checkbox">
+    <p class="checkbox-title">Without email</p>
+  </div>
+  <button class="done-button" [disabled]="authForm.invalid">Done</button>
+</form>
+
+<ng-template #submittedContent>
+  <app-user-info></app-user-info>
+</ng-template>
+
+<div *ngIf="!isSubmitted; else submittedContent">
+</div>
